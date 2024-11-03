@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود با رمز</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+        }
+        .container {
+            text-align: center;
+            max-width: 300px;
+        }
+        input[type="password"], button {
+            margin: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>لطفاً رمز خود را وارد کنید</h2>
+        <input type="password" id="password" placeholder="رمز">
+        <button onclick="checkPassword()">ورود</button>
+        <p id="message" style="color: red;"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === "1422") {
+                window.location.href = "music.html"; // هدایت به صفحه آهنگ
+            } else {
+                document.getElementById("message").innerText = "رمز اشتباه است";
+            }
+        }
+    </script>
+</body>
+</html>

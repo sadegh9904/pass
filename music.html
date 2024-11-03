@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پخش آهنگ</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3); /* پس‌زمینه‌ی گرادیانت صورتی */
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.2); /* کادر نیمه‌شفاف */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* سایه زیبا */
+            backdrop-filter: blur(10px); /* افکت بلور برای کادر */
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ffebcd; /* رنگ ملایم برای عنوان */
+        }
+        .heart {
+            font-size: 50px;
+            color: #ffebcd;
+            animation: heartbeat 1.5s infinite; /* انیمیشن ضربان قلب */
+        }
+        audio {
+            width: 100%;
+            margin-top: 15px;
+        }
+        /* انیمیشن ضربان قلب */
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div> <!-- قلب عاشقانه -->
+        <h2>آهنگ شما در حال پخش است...</h2>
+        <audio controls autoplay>
+            <source src="song.mp3" type="audio/mpeg">
+            مرورگر شما از پخش این فایل پشتیبانی نمی‌کند.
+        </audio>
+    </div>
+</body>
+</html>
